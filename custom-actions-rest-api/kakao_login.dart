@@ -72,7 +72,7 @@ Future<dynamic> _getKakaoUserData(
   final result = {
     'uid': 'kakao_${kakaoUser['id']}',
     'email': kakaoUser['kakao_account']?['email'],
-    'displayName': kakaoUser['properties']['nickname'],
+    'displayName': kakaoUser['properties']?['nickname'],
     'photoURL': kakaoUser['kakao_account']?['profile']?['profile_image_url'],
     'phoneNumber': kakaoUser['kakao_account']?['phone_number'],
   };
